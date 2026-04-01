@@ -201,19 +201,17 @@ body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{width:54px;he
 .cert-thumb:hover{transform:scale(1.04);border-color:var(--hi);box-shadow:0 12px 28px rgba(0,0,0,.3)}
 
 .ach-card--multi {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
+  align-items: flex-start;
   gap: 16px;
-}
-
-.ach-card--multi > * {
-  grid-column: unset;
 }
 
 .ach-content {
   display: flex;
   align-items: center;
   gap: 24px;
+  width: 100%;
 }
 
 .ach-left {
@@ -229,6 +227,7 @@ body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{width:54px;he
   flex-direction: column;
   gap: 12px;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 .cert-row {
@@ -241,6 +240,7 @@ body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{width:54px;he
   align-items: center;
   gap: 12px;
 }
+
 /* research */
 .res-list{padding-bottom:4px}
 .res-card{padding:28px 26px;border-radius:var(--r)}
