@@ -202,13 +202,11 @@ body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{width:54px;he
 
 .ach-card--junior{display:grid;grid-template-columns:minmax(0,1fr) 120px 220px;gap:18px 24px;align-items:start}
 .ach-info--junior{grid-column:1/-1;margin-bottom:0}
-.ach-info--junior h3{margin:0;font-size:.98rem;font-weight:500;line-height:1.45}
-.junior-noms{display:grid;grid-template-rows:repeat(4,1fr);gap:14px}
+.junior-noms{display:grid;grid-auto-rows:minmax(96px,auto);gap:14px;align-content:start}
 .junior-name{display:flex;align-items:center;min-height:96px;font-size:.98rem;line-height:1.45}
-.junior-places{display:grid;grid-template-rows:repeat(4,1fr);gap:14px;justify-items:end}
+.junior-places{display:grid;grid-auto-rows:minmax(96px,auto);gap:14px;justify-items:end;align-content:start}
 .junior-places .badge{width:100px;display:inline-flex;justify-content:center;align-items:center;justify-self:end}
 .junior-certs{display:grid;grid-template-columns:repeat(2,96px);gap:14px 12px;justify-content:end;align-content:start}
-.junior-certs .cert-thumb{width:96px}
 
 @media (max-width:700px){
   .ach-card--junior{grid-template-columns:1fr;gap:14px}
