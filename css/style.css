@@ -191,8 +191,8 @@ body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{width:54px;he
   font:600 .76rem var(--mono);letter-spacing:.05em;white-space:nowrap;
   background:rgba(255,201,90,.12);border:1px solid rgba(255,201,90,.24)
 }
-.badge.gold{background:rgba(255,201,90,.2);border-color:rgba(255,201,90,.42);box-shadow:0 0 18px rgba(255,201,90,.1)}
-.ach-cert{width:96px}
+.ach-cert{display:grid;grid-template-columns: repeat(2, 96px);gap:12px;}
+.ach-main{display:grid;grid-template-columns: 1fr 220px;gap:24px;align-items:start;}
 .cert-thumb{
   display:block;width:96px;aspect-ratio:1 / 1.28;border-radius:12px;overflow:hidden;
   border:1px solid var(--line);background:rgba(255,255,255,.02);transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease
