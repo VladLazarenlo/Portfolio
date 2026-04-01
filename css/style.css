@@ -200,43 +200,15 @@ body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{width:54px;he
 .cert-thumb img{width:100%;height:100%;object-fit:cover}
 .cert-thumb:hover{transform:scale(1.04);border-color:var(--hi);box-shadow:0 12px 28px rgba(0,0,0,.3)}
 
-.ach-card--junior{display:block}
-.ach-info--junior{margin-bottom:18px}
+.ach-card--junior{display:grid;grid-template-columns:minmax(0,1fr) 204px;gap:18px 24px;align-items:start}
+.ach-info--junior{grid-column:1 / -1;margin-bottom:0}
 .ach-info--junior h3{margin:0;font-size:.98rem;font-weight:500;line-height:1.45}
-
-.junior-left{display:flex;flex-direction:column;gap:18px}
-
-/* кожен ряд */
-.junior-row{
-  display:grid;
-  grid-template-columns:minmax(0,1fr) auto auto;
-  align-items:center;
-  gap:16px;
-}
-
-/* назва */
-.junior-name{
-  min-width:0;
-  font-size:.98rem;
-  line-height:1.45;
-}
-
-/* місце */
-.junior-row .badge{
-  width:100px;
-  display:inline-flex;
-  justify-content:center;
-  text-align:center;
-}
-
-/* сертифікат */
-.junior-cert{
-  display:block;
-}
-
-.junior-cert .cert-thumb{
-  width:96px;
-}
+.junior-left{display:flex;flex-direction:column;gap:14px;min-width:0}
+.junior-row{display:grid;grid-template-columns:minmax(0,1fr) 110px;gap:16px;align-items:center}
+.junior-name{min-width:0;font-size:.98rem;line-height:1.45}
+.junior-row .badge{width:100px;display:inline-flex;justify-content:center;text-align:center}
+.junior-certs{display:grid;grid-template-columns:repeat(2,96px);gap:14px 12px;justify-content:end;align-content:start}
+.junior-certs .cert-thumb{width:96px}
 
 @media (max-width:700px){
   .ach-card--junior{grid-template-columns:1fr;gap:14px}
@@ -245,7 +217,6 @@ body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{width:54px;he
   .junior-certs{grid-template-columns:repeat(2,82px);justify-content:start}
   .junior-certs .cert-thumb{width:82px}
 }
-
 /* research */
 .res-list{padding-bottom:4px}
 .res-card{padding:28px 26px;border-radius:var(--r)}
