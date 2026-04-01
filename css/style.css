@@ -206,12 +206,20 @@ body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{width:54px;he
   grid-template-areas:
     "title title"
     "list certs";
-  gap:18px 22px;
+  gap:18px 24px;
   align-items:start;
 }
 
-.ach-card--junior .ach-info{
+.ach-card--junior > .ach-info{
   grid-area:title;
+  min-width:0;
+}
+
+.ach-card--junior > .ach-info h3{
+  margin:0;
+  font-size:.98rem;
+  font-weight:500;
+  line-height:1.45;
 }
 
 .junior-list{
@@ -230,6 +238,7 @@ body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{width:54px;he
 }
 
 .junior-name{
+  min-width:0;
   font-size:.98rem;
   line-height:1.45;
 }
@@ -240,6 +249,7 @@ body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{width:54px;he
   grid-template-columns:repeat(2,96px);
   gap:12px;
   justify-content:end;
+  align-content:start;
 }
 
 @media (max-width:700px){
@@ -249,11 +259,6 @@ body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{width:54px;he
       "title"
       "list"
       "certs";
-  }
-
-  .junior-row{
-    grid-template-columns:1fr auto;
-    gap:12px;
   }
 
   .junior-certs{
