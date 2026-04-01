@@ -200,43 +200,66 @@ body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{width:54px;he
 .cert-thumb img{width:100%;height:100%;object-fit:cover}
 .cert-thumb:hover{transform:scale(1.04);border-color:var(--hi);box-shadow:0 12px 28px rgba(0,0,0,.3)}
 
-.ach-card--multi {
-  grid-template-columns: 1fr auto;
-  grid-template-rows: auto 1fr;
+.ach-card--junior{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 204px;
+  grid-template-areas:
+    "title title"
+    "list certs";
+  gap:18px 22px;
+  align-items:start;
 }
 
-.ach-card--multi .ach-info {
-  grid-column: 1 / -1;
-  grid-row: 1;
+.ach-card--junior .ach-info{
+  grid-area:title;
 }
 
-.ach-content {
-  grid-column: 1 / 2;
-  grid-row: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 12px;
+.junior-list{
+  grid-area:list;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  min-width:0;
 }
 
-.ach-right {
-  grid-column: 2 / 3;
-  grid-row: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: flex-end;
+.junior-row{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:16px;
 }
 
-.cert-row {
-  display: flex;
-  gap: 12px;
+.junior-name{
+  font-size:.98rem;
+  line-height:1.45;
 }
 
-.row.row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.junior-certs{
+  grid-area:certs;
+  display:grid;
+  grid-template-columns:repeat(2,96px);
+  gap:12px;
+  justify-content:end;
+}
+
+@media (max-width:700px){
+  .ach-card--junior{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "title"
+      "list"
+      "certs";
+  }
+
+  .junior-row{
+    grid-template-columns:1fr auto;
+    gap:12px;
+  }
+
+  .junior-certs{
+    grid-template-columns:repeat(2,82px);
+    justify-content:start;
+  }
 }
 
 /* research */
