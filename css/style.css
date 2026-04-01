@@ -201,33 +201,31 @@ body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{width:54px;he
 .cert-thumb:hover{transform:scale(1.04);border-color:var(--hi);box-shadow:0 12px 28px rgba(0,0,0,.3)}
 
 .ach-card--multi {
-  display: flex !important;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+}
+
+.ach-card--multi .ach-info {
+  grid-column: 1 / -1;
+  grid-row: 1;
 }
 
 .ach-content {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  width: 100%;
-}
-
-.ach-left {
+  grid-column: 1 / 2;
+  grid-row: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 12px;
-  flex: 1;
 }
 
 .ach-right {
+  grid-column: 2 / 3;
+  grid-row: 2;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  flex-shrink: 0;
-  margin-left: auto;
+  align-items: flex-end;
 }
 
 .cert-row {
