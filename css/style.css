@@ -200,11 +200,34 @@ body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{width:54px;he
 .cert-thumb img{width:100%;height:100%;object-fit:cover}
 .cert-thumb:hover{transform:scale(1.04);border-color:var(--hi);box-shadow:0 12px 28px rgba(0,0,0,.3)}
 
-.ach-content{display:grid;grid-template-columns:minmax(0,1fr) 204px;gap:20px;align-items:start;margin-top:14px;}
-.ach-left{display:flex;flex-direction:column;gap:10px;min-width:0;}
-.row{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.ach-right{display:flex;flex-direction:column;gap:12px;}
-.cert-row{display:flex;gap:12px;}
+.ach-content{
+  display:grid;
+  grid-template-columns:max-content max-content;
+  gap:20px;
+  align-items:start;
+  margin-top:14px;
+  width:max-content;
+}
+.ach-left{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.row.row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.ach-right{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.cert-row{
+  display:flex;
+  gap:12px;
+}
 
 /* research */
 .res-list{padding-bottom:4px}
