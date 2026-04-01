@@ -225,27 +225,53 @@ body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{width:54px;he
 }
 
 /* номінації */
-.junior-list{
-  grid-area:list;
-  display:flex;
-  flex-direction:column;
-  gap:24px;
-  padding-top:6px;
+
+.ach-card--junior{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 110px 204px;
+  grid-template-rows:auto repeat(4,auto);
+  grid-template-areas:
+    "title title title"
+    "n1 p1 certs"
+    "n2 p2 certs"
+    "n3 p3 certs"
+    "n4 p4 certs";
+  gap:14px 16px;
+}
+
+.ach-card--junior > .ach-info{
+  grid-area:title;
+}
+
+.junior-name:nth-child(1){grid-area:n1;}
+.junior-name:nth-child(2){grid-area:n2;}
+.junior-name:nth-child(3){grid-area:n3;}
+.junior-name:nth-child(4){grid-area:n4;}
+
+.junior-places span:nth-child(1){grid-area:p1;}
+.junior-places span:nth-child(2){grid-area:p2;}
+.junior-places span:nth-child(3){grid-area:p3;}
+.junior-places span:nth-child(4){grid-area:p4;}
+
+.junior-certs{
+  grid-area:certs;
+  display:grid;
+  grid-template-columns:repeat(2,96px);
+  gap:14px 12px;
+  justify-content:end;
+  align-content:start;
+}
+
+.junior-places .badge{
+  width:100px;
+  text-align:center;
+  display:inline-flex;
+  justify-content:center;
 }
 
 .junior-name{
   font-size:.98rem;
   line-height:1.45;
-}
-
-/* місця */
-.junior-places{
-  grid-area:places;
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-  align-items:flex-end;
-  padding-top:6px;
 }
 
 .junior-places .badge{
