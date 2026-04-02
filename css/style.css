@@ -206,8 +206,7 @@ body:has(a:hover) .cursor-ring,body:has(button:hover) .cursor-ring{width:54px;he
 .junior-noms{grid-column:1!important;grid-row:2!important;display:flex!important;flex-direction:column!important;justify-content:space-between!important;height:258px!important;gap:0!important;}
 .junior-name{display:flex!important;align-items:center!important;min-height:0!important;font-size:.98rem!important;line-height:1.45!important;}
 .junior-places{grid-column:2!important;grid-row:2!important;display:flex!important;flex-direction:column!important;justify-content:space-between!important;align-items:flex-end!important;height:258px!important;gap:0!important;}
-.junior-places .badge{min-width:100px!important;padding:6px 12px!important;display:inline-flex!important;justify-content:center!important;align-items:center!important;}
-
+.junior-places .badge{min-width:100px!important;padding:6px 12px!important;display:flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;}
 @media (max-width:700px){
   .ach-card--junior{grid-template-columns:1fr;gap:14px}
   .junior-noms{gap:10px}
